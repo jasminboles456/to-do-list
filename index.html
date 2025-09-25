@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="container">
+            <div class="page-header">
+                <button id="langToggle" class="lang-toggle">عربي</button>
+            </div>
+            <h1 data-lang="login">Login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail" data-lang="email">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword" data-lang="password">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" data-lang="login">Login</button>
+                <p class="message" id="loginMessage"></p>
+                <p class="link-text"><span data-lang="noAccount">Don't have an account?</span> <a href="#" id="showRegister" data-lang="registerHere">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Page -->
+    <div id="registerPage" class="page">
+        <div class="container">
+            <div class="page-header">
+                <button id="langToggleRegister" class="lang-toggle">عربي</button>
+            </div>
+            <h1 data-lang="register">Register</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerFirstName" data-lang="firstName">First Name:</label>
+                    <input type="text" id="registerFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerLastName" data-lang="lastName">Last Name:</label>
+                    <input type="text" id="registerLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail" data-lang="email">Email:</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword" data-lang="password">Password:</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <button type="submit" data-lang="register">Register</button>
+                <p class="message" id="registerMessage"></p>
+                <p class="link-text"><span data-lang="haveAccount">Already have an account?</span> <a href="#" id="showLogin" data-lang="loginHere">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page">
+        <div class="container">
+            <header>
+                <h1><span data-lang="welcome">Welcome,</span> <span id="userName"></span>!</h1>
+                <div class="header-actions">
+                    <button id="langToggleHome" class="lang-toggle">عربي</button>
+                    <button id="logoutBtn" class="logout-btn" data-lang="logout">Logout</button>
+                </div>
+            </header>
+            
+            <div class="todo-section">
+                <h2 data-lang="todoList">My Todo List</h2>
+                <form id="todoForm">
+                    <div class="add-todo">
+                        <input type="text" id="todoInput" data-placeholder-en="Add a new task..." data-placeholder-ar="أضف مهمة جديدة..." placeholder="Add a new task..." required>
+                        <button type="submit" data-lang="addTask">Add Task</button>
+                    </div>
+                </form>
+                
+                <div class="todo-list" id="todoList">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/User.js"></script>
+    <script src="js/Todo.js"></script>
+    <script src="js/LanguageManager.js"></script>
+    <script src="js/App.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
